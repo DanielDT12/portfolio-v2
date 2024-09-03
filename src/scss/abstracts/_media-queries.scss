@@ -1,0 +1,27 @@
+@mixin color-scheme-media($color-scheme) {
+	@media (prefers-color-scheme: $color-scheme) {
+		@content;
+	}
+}
+
+// Prøver en ny mq liste
+$breakpoints: (
+	xs: 350px,
+	s: 450px,
+	m: 600px,
+	ml: 768px,
+	l: 968px,
+	xl: 1024px,
+	xxl: 1240px,
+);
+
+@mixin mq($key) {
+	$size: map-get(
+		$map: $breakpoints,
+		$key: $key,
+	);
+
+	@media only screen and (max-width: $size) {
+		@content;
+	}
+}
