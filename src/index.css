@@ -95,8 +95,129 @@ textarea:not([rows]) {
 }
 
 /* RESET END */
+@font-face {
+  font-family: jetbrains-mono;
+  src: url(/font/JetBrainsMono[wght].ttf), url(/font/JetBrainsMono-Italic[wght].ttf);
+}
 :root {
+  /* ROSE PINE MAIN/DARK */
+  /* ACCENT COLORS */
+  --clr-pink-dt: hsl(343, 76%, 68%);
+  --clr-yellow-dt: hsl(35, 88%, 72%);
+  --clr-rose-dt: hsl(2, 55%, 83%);
+  --clr-blue-dt: hsl(197, 49%, 38%);
+  --clr-light-blue-dt: hsl(189, 43%, 73%);
+  --clr-purple-dt: hsl(267, 57%, 78%);
+  /* NEUTRAL COLORS DARK */
+  --clr-neutral-dark-900: hsl(249, 22%, 12%);
+  --clr-neutral-dark-800: hsl(247, 23%, 15%);
+  --clr-neutral-dark-600: hsl(248, 25%, 18%);
+  --clr-neutral-dark-400: hsl(249, 12%, 47%);
+  --clr-neutral-dark-300: hsl(248, 24%, 75%);
+  --clr-neutral-dark-100: hsl(245, 50%, 91%);
+  /* ROSE PINE LIGHT */
+  /* ACCENT COLORS */
+  --clr-pink-lt: hsl(343, 35%, 55%);
+  --clr-yellow-lt: hsl(35, 81%, 56%);
+  --clr-rose-lt: hsl(3, 53%, 67%);
+  --clr-blue-lt: hsl(197, 53%, 34%);
+  --clr-light-blue-lt: hsl(189, 30%, 48%);
+  --clr-purple-lt: hsl(268, 21%, 57%);
+  /* NEUTRAL COLORS LIGHT */
+  --clr-neutral-light-100: hsl(35, 100%, 98%);
+  --clr-neutral-light-200: hsl(32, 57%, 95%);
+  --clr-neutral-light-300: hsl(28, 40%, 92%);
+  --clr-neutral-light-400: hsl(257, 9%, 61%);
+  --clr-neutral-light-600: hsl(248, 12%, 52%);
+  --clr-neutral-light-700: hsl(248, 19%, 40%);
+  /* FONT */
+  --ff-special: jetbrains-mono, system-ui, sans-serif;
+  --ff-global: system-ui, sans-serif;
+  /* FONT SIZE */
+  --fs-100: 0.75rem;
+  --fs-200: 0.875rem;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.75rem;
+  --fs-800: 2rem;
+  --fs-900: 2.5rem;
+  /* FONT WEIGHT */
+  --fw-xt-thin: 100;
+  --fw-thin: 300;
+  --fw-regular: 500;
+  --fw-bold: 700;
+  /* MISC */
+  --size-main-border: 2rem;
+  --padding-wrapper: 2rem;
+  --btn-ani: all 150ms cubic-bezier(1, 0.07, 0.77, 1.49);
+}
+:root[data-color-theme=dark] {
+  --clr-bg: var(--clr-neutral-dark-900);
+  --clr-bg-2: var(--clr-neutral-dark-600);
+  --clr-text-heading: var(--clr-neutral-dark-100);
+  --clr-text-regular: var(--clr-neutral-dark-300);
+  --clr-pink: var(--clr-pink-dt);
+  --clr-yellow: var(--clr-yellow-dt);
+  --clr-rose: var(--clr-rose-dt);
+  --clr-blue: var(--clr-blue-dt);
+  --clr-light-blue: var(--clr-light-blue-dt);
+  --clr-purple: var(--clr-purple-dt);
+}
+:root[data-color-theme=light] {
+  --clr-bg: var(--clr-neutral-light-100);
+  --clr-bg-2: var(--clr-neutral-light-200);
+  --clr-text-heading: var(--clr-neutral-light-700);
+  --clr-text-regular: var(--clr-neutral-light-600);
+  --clr-pink: var(--clr-pink-lt);
+  --clr-yellow: var(--clr-yellow-lt);
+  --clr-rose: var(--clr-rose-lt);
+  --clr-blue: var(--clr-blue-lt);
+  --clr-light-blue: var(--clr-light-blue-lt);
+  --clr-purple: var(--clr-purple-lt);
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-color-theme=dark] {
+    --clr-bg: var(--clr-neutral-dark-900);
+    --clr-bg-2: var(--clr-neutral-dark-600);
+    --clr-text-heading: var(--clr-neutral-dark-100);
+    --clr-text-regular: var(--clr-neutral-dark-300);
+    --clr-pink: var(--clr-pink-dt);
+    --clr-yellow: var(--clr-yellow-dt);
+    --clr-rose: var(--clr-rose-dt);
+    --clr-blue: var(--clr-blue-dt);
+    --clr-light-blue: var(--clr-light-blue-dt);
+    --clr-purple: var(--clr-purple-dt);
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root[data-color-theme=light] {
+    --clr-bg: var(--clr-neutral-light-100);
+    --clr-bg-2: var(--clr-neutral-light-200);
+    --clr-text-heading: var(--clr-neutral-light-700);
+    --clr-text-regular: var(--clr-neutral-light-600);
+    --clr-pink: var(--clr-pink-lt);
+    --clr-yellow: var(--clr-yellow-lt);
+    --clr-rose: var(--clr-rose-lt);
+    --clr-blue: var(--clr-blue-lt);
+    --clr-light-blue: var(--clr-light-blue-lt);
+    --clr-purple: var(--clr-purple-lt);
+  }
+}
+
+@media screen and (max-width: 968px) {
+  :root {
+    --size-main-border: 1rem;
+    --padding-wrapper: 1rem;
+  }
+}
+html {
   color-scheme: dark light;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .flex {
