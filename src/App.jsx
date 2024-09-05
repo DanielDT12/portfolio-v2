@@ -1,8 +1,17 @@
+import { Outlet } from "react-router-dom";
+import { PrimaryHeader } from "./components/PrimaryHeader";
+import { PrimaryFooter } from "./components/PrimaryFooter";
+
 function App() {
 	return (
-		<>
-			<h1 className="test">This is a test</h1>
-		</>
+		<div className="app-wrapper">
+			<PrimaryHeader
+				headerClass={"primary-header flex"}
+				themeSwitcherClass={"primary-header__theme-switcher"}
+			/>
+			<Outlet />
+			<PrimaryFooter footerClass={"primary-footer flex"} />
+		</div>
 	);
 }
 
