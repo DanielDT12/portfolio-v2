@@ -59,11 +59,12 @@
 	/* FONT WEIGHT */
 	--fw-xt-thin: 100;
 	--fw-thin: 300;
-	--fw-regular: 500;
+	--fw-regular: 400;
+	--fw-semi-bold: 500;
 	--fw-bold: 700;
 
 	/* MISC */
-	--size-main-border: 2rem;
+	--main-border-spacing: 2rem; // Brukes for å få rett pos på main border
 	--padding-wrapper: 2rem;
 	--btn-ani: all 150ms cubic-bezier(1, 0.07, 0.77, 1.49);
 
