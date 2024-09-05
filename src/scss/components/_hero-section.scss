@@ -1,0 +1,46 @@
+.hero-section {
+	flex: 1;
+
+	margin-inline: var(--main-border-spacing);
+	border-left: 1px solid var(--clr-text-heading);
+	border-right: 1px solid var(--clr-text-heading);
+	padding: 0 var(--main-border-spacing);
+
+	&__intro-text {
+		gap: 1rem;
+		max-width: 58ch;
+	}
+
+	&__special-text {
+		color: var(--clr-rose);
+		font-family: var(--ff-special);
+		font-size: var(--fs-300);
+	}
+
+	&__title {
+		font-size: clamp(var(--fs-700), 6vw, var(--fs-900));
+	}
+
+	&__github-icon {
+		// local custom prop for scaling icon
+		--icon-width-large: 8rem;
+		--icon-width-small: 4rem;
+		--view-port-scaling: 15vw;
+		width: clamp(
+			var(--icon-width-small),
+			var(--view-port-scaling),
+			var(--icon-width-large)
+		);
+		height: clamp(
+			var(--icon-width-small),
+			var(--view-port-scaling),
+			var(--icon-width-large)
+		);
+		transition: all 300ms ease-in-out;
+
+		&:is(:hover, :focus) {
+			color: var(--clr-rose);
+			transform: translateY(-5px);
+		}
+	}
+}
