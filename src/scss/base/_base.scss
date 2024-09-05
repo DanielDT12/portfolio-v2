@@ -1,0 +1,42 @@
+html {
+	font-family: var(--ff-global);
+	color-scheme: dark light;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	background-color: var(--clr-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--clr-text-heading);
+	font-weight: var(--fw-bold);
+}
+
+p,
+button,
+a,
+textarea,
+input {
+	color: var(--clr-text-regular);
+	font-weight: var(--fw-regular);
+	font-size: var(--fs-500);
+}
+
+.app-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100dvh;
+}
+
+.placeholder {
+	flex: 1;
+}
