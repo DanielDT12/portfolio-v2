@@ -1,0 +1,20 @@
+.detail-text {
+	font-family: var(--ff-special);
+	letter-spacing: 0.5px;
+	line-height: 1;
+
+	&__text {
+		color: var(--clr-light-blue);
+		font-size: var(--fs-100);
+	}
+
+	&__symbol-span {
+		color: var(--clr-purple);
+		font-size: var(--fs-100);
+	}
+
+	&__span {
+		color: var(--clr-yellow);
+		font-size: var(--fs-100);
+	}
+}
