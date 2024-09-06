@@ -150,6 +150,7 @@ textarea:not([rows]) {
   --fw-semi-bold: 500;
   --fw-bold: 700;
   /* MISC */
+  --main-container-width: 74rem;
   --main-border-spacing: 2rem;
   --padding-wrapper: 2rem;
   --btn-ani: all 150ms cubic-bezier(1, 0.07, 0.77, 1.49);
@@ -209,7 +210,7 @@ textarea:not([rows]) {
 
 @media screen and (max-width: 968px) {
   :root {
-    --size-main-border: 1rem;
+    --main-border-spacing: 1rem;
     --padding-wrapper: 1rem;
   }
 }
@@ -252,8 +253,12 @@ input {
   min-height: 100dvh;
 }
 
-.placeholder {
+.test {
   flex: 1;
+  margin-inline: var(--main-border-spacing);
+  border-left: 1px solid var(--clr-text-heading);
+  border-right: 1px solid var(--clr-text-heading);
+  padding: 0 var(--main-border-spacing);
 }
 
 .primary-header {
@@ -263,12 +268,34 @@ input {
   padding-block: 1rem;
 }
 
+.theme-switcher {
+  position: fixed;
+  gap: 0.5rem;
+  color: var(--clr-purple);
+  font-family: var(--ff-special);
+}
+.theme-switcher__input {
+  --radio-size: 0.8rem;
+  -webkit-appearance: none;
+  appearance: none;
+  height: var(--radio-size);
+  width: var(--radio-size);
+  border: 1px solid var(--clr-text-heading);
+  transition: background-color 300ms ease;
+}
+.theme-switcher__input:checked {
+  background-color: var(--clr-purple);
+}
+
 .hero-section {
   flex: 1;
   margin-inline: var(--main-border-spacing);
   border-left: 1px solid var(--clr-text-heading);
   border-right: 1px solid var(--clr-text-heading);
   padding: 0 var(--main-border-spacing);
+}
+.hero-section__wrapper {
+  width: var(--main-container-width);
 }
 .hero-section__intro-text {
   gap: 1rem;
@@ -303,6 +330,7 @@ input {
 }
 
 .detail-text {
+  position: fixed;
   font-family: var(--ff-special);
   letter-spacing: 0.5px;
   line-height: 1;
