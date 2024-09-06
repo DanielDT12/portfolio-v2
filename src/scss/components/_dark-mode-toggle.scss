@@ -1,0 +1,20 @@
+.theme-switcher {
+	position: fixed; // Fjerner content fra flow for og ha consistent spaceing rundt border.
+	gap: 0.5rem;
+	color: var(--clr-purple);
+	font-family: var(--ff-special);
+
+	&__input {
+		--radio-size: 0.8rem;
+		-webkit-appearance: none;
+		appearance: none;
+		height: var(--radio-size);
+		width: var(--radio-size);
+		border: 1px solid var(--clr-text-heading);
+		transition: background-color 300ms ease;
+
+		&:checked {
+			background-color: var(--clr-purple);
+		}
+	}
+}
