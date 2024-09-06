@@ -37,6 +37,11 @@ input {
 	min-height: 100dvh;
 }
 
-.placeholder {
+.test {
 	flex: 1;
+
+	margin-inline: var(--main-border-spacing);
+	border-left: 1px solid var(--clr-text-heading);
+	border-right: 1px solid var(--clr-text-heading);
+	padding: 0 var(--main-border-spacing);
 }
