@@ -16,6 +16,18 @@ const router = createBrowserRouter([
 				path: "/",
 				element: <HeroSection />,
 			},
+			{
+				path: "/about",
+				element: <div className="test">About page</div>,
+			},
+			{
+				path: "/work",
+				element: <div className="test">My Work page</div>,
+			},
+			{
+				path: "/contact",
+				element: <div className="test">contact page</div>,
+			},
 		],
 		errorElement: <div>Error element</div>,
 	},
