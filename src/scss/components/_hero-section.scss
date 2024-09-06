@@ -6,6 +6,10 @@
 	border-right: 1px solid var(--clr-text-heading);
 	padding: 0 var(--main-border-spacing);
 
+	&__wrapper {
+		width: var(--main-container-width);
+	}
+
 	&__intro-text {
 		gap: 1rem;
 		max-width: 58ch;
