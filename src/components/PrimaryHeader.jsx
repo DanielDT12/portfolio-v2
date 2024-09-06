@@ -1,11 +1,10 @@
 import { DarkLightModeToggle } from "./smallComponents/DarkLightModeToggle";
 
-export const PrimaryHeader = ({ headerClass, themeSwitcherClass }) => {
+export const PrimaryHeader = ({ headerClass }) => {
 	return (
 		<header className={headerClass}>
 			<DarkLightModeToggle
-				className={themeSwitcherClass}
-				wrapperClass={"theme-switcher"}
+				wrapperClass={"theme-switcher flex"}
 				labelClass={"theme-switcher__label"}
 				inputClass={"theme-switcher__input"}
 			/>
