@@ -1,4 +1,5 @@
 .detail-text {
+	position: fixed; // Fjerner content fra flow, for og ha consistent spacing rundt border.
 	font-family: var(--ff-special);
 	letter-spacing: 0.5px;
 	line-height: 1;
