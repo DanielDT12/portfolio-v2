@@ -1,0 +1,33 @@
+.primary-nav {
+	font-family: var(--ff-special);
+
+	&__list {
+		gap: 1rem;
+	}
+
+	&__list-item {
+		font-size: clamp(var(--fs-700), 9vw, var(--fs-900));
+		font-weight: var(--fw-xt-thin);
+
+		&::marker {
+			content: "01. ";
+			color: var(--clr-blue);
+		}
+
+		&:nth-child(2)::marker {
+			content: "02. ";
+			color: var(--clr-pink);
+		}
+
+		&:nth-child(3)::marker {
+			content: "03. ";
+			color: var(--clr-yellow);
+		}
+	}
+
+	&__link {
+		font-size: clamp(var(--fs-700), 9vw, var(--fs-900));
+		font-weight: var(--fw-xt-thin);
+		text-decoration: none;
+	}
+}
