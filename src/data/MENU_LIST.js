@@ -1,6 +1,6 @@
 const MENU_LIST = [
 	{
-		name: "About",
+		name: "About Me",
 		href: "/about",
 	},
 	{
