@@ -23,10 +23,12 @@ export const DarkLightModeToggle = ({
 
 	const handleDarkToggle = () => {
 		setColorTheme("dark");
+		console.log(colorTheme);
 	};
 
 	const handleLightToggle = () => {
 		setColorTheme("light");
+		console.log(colorTheme);
 	};
 
 	return (
