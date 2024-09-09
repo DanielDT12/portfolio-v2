@@ -4,7 +4,7 @@ import { PrimaryNav } from "./smallComponents/PrimaryNav";
 export const HeroSection = () => {
 	return (
 		<section className="hero-section flex-center">
-			<div className="hero-section__wrapper flex-between">
+			<div className="hero-section__wrapper">
 				<div className="hero-section__intro-text flex-col">
 					<p className="hero-section__special-text">
 						Hi, welcome to my portfolio
