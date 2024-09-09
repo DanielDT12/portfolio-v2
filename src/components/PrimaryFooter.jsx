@@ -1,3 +1,5 @@
+import Clock from "./decorativeComponents/Clock";
+
 export const PrimaryFooter = ({ footerClass }) => {
 	return (
 		<footer className={footerClass}>
@@ -8,6 +10,7 @@ export const PrimaryFooter = ({ footerClass }) => {
 					<span className="detail-text__symbol-span">;</span>
 				</p>
 			</div>
+			<Clock />
 		</footer>
 	);
 };
