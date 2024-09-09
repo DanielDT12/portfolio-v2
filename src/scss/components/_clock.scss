@@ -1,0 +1,14 @@
+@use "../abstracts/media-queries" as *;
+
+.clock {
+	position: fixed;
+	right: 0;
+	margin-right: 2rem;
+	color: var(--clr-rose);
+	font-family: var(--ff-special);
+	font-size: var(--fs-300);
+
+	@include mq("l") {
+		margin-right: 1rem;
+	}
+}
