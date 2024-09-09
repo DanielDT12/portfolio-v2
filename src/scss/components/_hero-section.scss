@@ -1,3 +1,5 @@
+@use "../abstracts/media-queries" as *;
+
 .hero-section {
 	flex: 1;
 
@@ -7,7 +9,14 @@
 	padding: 0 var(--main-border-spacing);
 
 	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		width: var(--main-container-width);
+
+		@include mq("l") {
+			flex-direction: column; // Needs better adjustment of nav
+		}
 	}
 
 	&__intro-text {
