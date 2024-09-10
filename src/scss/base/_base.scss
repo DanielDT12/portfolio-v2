@@ -37,9 +37,11 @@ input {
 	min-height: 100dvh;
 }
 
-.test {
+.main {
 	flex: 1;
 
+	display: flex;
+	flex-direction: column;
 	margin-inline: var(--main-border-spacing);
 	border-left: 1px solid var(--clr-text-heading);
 	border-right: 1px solid var(--clr-text-heading);
