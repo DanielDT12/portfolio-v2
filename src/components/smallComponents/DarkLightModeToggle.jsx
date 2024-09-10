@@ -15,20 +15,16 @@ export const DarkLightModeToggle = ({
 
 	const [colorTheme, setColorTheme] = useState(initialTheme());
 
-	console.log(colorTheme);
-
 	useEffect(() => {
 		document.documentElement.setAttribute("data-color-theme", colorTheme);
 	}, [colorTheme]);
 
 	const handleDarkToggle = () => {
 		setColorTheme("dark");
-		console.log(colorTheme);
 	};
 
 	const handleLightToggle = () => {
 		setColorTheme("light");
-		console.log(colorTheme);
 	};
 
 	return (
