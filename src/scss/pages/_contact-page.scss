@@ -1,0 +1,21 @@
+.contact-page {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--clr-bg-2);
+
+	form {
+		flex: 1;
+
+		display: grid;
+		place-content: center;
+	}
+
+	&__home-link {
+		font-family: var(--ff-special);
+		margin-bottom: 1.5rem;
+		align-self: end;
+		color: var(--clr-text-heading);
+		font-size: var(--fs-800);
+		text-decoration: none;
+	}
+}
