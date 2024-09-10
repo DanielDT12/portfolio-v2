@@ -6,6 +6,8 @@ import App from "./App.jsx";
 import "./index.css";
 
 import { HeroSection } from "./components/HeroSection.jsx";
+import { MyWork } from "./pages/MyWork.jsx";
+import { ContactPage } from "./pages/ContactPage.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -26,11 +28,11 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/work",
-				element: <div className="test">My Work page</div>,
+				element: <MyWork />,
 			},
 			{
 				path: "/contact",
-				element: <div className="test">contact page</div>,
+				element: <ContactPage />,
 			},
 		],
 		errorElement: <div>Error element</div>,
