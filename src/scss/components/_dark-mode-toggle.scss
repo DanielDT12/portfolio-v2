@@ -1,5 +1,6 @@
 .theme-switcher {
-	position: fixed; // Fjerner content fra flow for og ha consistent spaceing rundt border.
+	position: absolute; // Linket til primaryHeader position relative.
+	right: 0;
 	gap: 0.5rem;
 	color: var(--clr-purple);
 	font-family: var(--ff-special);
