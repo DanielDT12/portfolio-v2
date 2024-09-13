@@ -1,8 +1,36 @@
 .hamburger-menu {
 	--icon-size: 4rem;
-	position: relative;
 	align-self: end;
 	margin-top: 1rem;
+	z-index: 10;
+
+	&__nav {
+		position: absolute;
+		inset: 0;
+		background-image: linear-gradient(
+			to bottom,
+			var(--clr-bg) 0%,
+			var(--clr-bg) 12%,
+			var(--clr-blue) 12%,
+			var(--clr-blue) 33%,
+			var(--clr-pink) 33%,
+			var(--clr-pink) 66%,
+			var(--clr-yellow) 66%,
+			var(--clr-yellow) 87%,
+			var(--clr-bg) 87%,
+			var(--clr-bg) 100%
+		);
+		z-index: -10;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		height: 100%;
+		list-style: none;
+	}
 
 	&__button {
 		border: 0;
@@ -18,8 +46,11 @@
 		color: var(--clr-text-heading);
 	}
 
-	&__nav {
-		position: absolute;
-		background-color: red;
+	&__link {
+		color: var(--clr-bg);
+		font-family: var(--ff-special);
+		font-weight: var(--fw-bold);
+		font-size: var(--fs-800);
+		text-decoration: none;
 	}
 }
