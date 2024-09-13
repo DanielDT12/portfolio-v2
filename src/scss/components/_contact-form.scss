@@ -24,12 +24,14 @@
 	}
 
 	&__input {
+		width: 100%;
 		border: none;
 		border-radius: 0.25rem;
 		padding: 1rem;
 		color: var(--clr-bg);
 		background-color: var(--clr-text-regular);
 		font-weight: var(--fw-regular);
+		font-family: var(--ff-global);
 
 		&::placeholder {
 			color: var(--clr-bg);
