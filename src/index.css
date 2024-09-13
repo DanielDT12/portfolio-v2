@@ -257,6 +257,7 @@ input {
   flex: 1;
   display: flex;
   flex-direction: column;
+  position: relative;
   margin-inline: var(--main-border-spacing);
   border-left: 1px solid var(--clr-text-heading);
   border-right: 1px solid var(--clr-text-heading);
@@ -283,14 +284,28 @@ input {
 }
 
 .primary-header {
-  justify-content: end;
+  position: relative;
   margin-inline: var(--main-border-spacing);
   border-bottom: 1px solid var(--clr-text-heading);
   padding-block: 1rem;
 }
 
+.breadcrumb {
+  position: absolute;
+  font-family: var(--ff-special);
+}
+.breadcrumb__link {
+  color: var(--clr-light-blue);
+  font-size: var(--fs-300);
+  text-decoration: none;
+}
+.breadcrumb__link--active-page {
+  color: var(--clr-rose);
+}
+
 .theme-switcher {
-  position: fixed;
+  position: absolute;
+  right: 0;
   gap: 0.5rem;
   color: var(--clr-purple);
   font-family: var(--ff-special);
@@ -402,12 +417,14 @@ input {
   font-size: var(--fs-500);
 }
 .contact-form__input {
+  width: 100%;
   border: none;
   border-radius: 0.25rem;
   padding: 1rem;
   color: var(--clr-bg);
   background-color: var(--clr-text-regular);
   font-weight: var(--fw-regular);
+  font-family: var(--ff-global);
 }
 .contact-form__input::placeholder {
   color: var(--clr-bg);
@@ -434,9 +451,23 @@ input {
 
 .hamburger-menu {
   --icon-size: 4rem;
-  position: relative;
   align-self: end;
   margin-top: 1rem;
+  z-index: 10;
+}
+.hamburger-menu__nav {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to bottom, var(--clr-bg) 0%, var(--clr-bg) 12%, var(--clr-blue) 12%, var(--clr-blue) 33%, var(--clr-pink) 33%, var(--clr-pink) 66%, var(--clr-yellow) 66%, var(--clr-yellow) 87%, var(--clr-bg) 87%, var(--clr-bg) 100%);
+  z-index: -10;
+}
+.hamburger-menu__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  list-style: none;
 }
 .hamburger-menu__button {
   border: 0;
@@ -450,9 +481,12 @@ input {
   height: var(--icon-size);
   color: var(--clr-text-heading);
 }
-.hamburger-menu__nav {
-  position: absolute;
-  background-color: red;
+.hamburger-menu__link {
+  color: var(--clr-bg);
+  font-family: var(--ff-special);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-800);
+  text-decoration: none;
 }
 
 .primary-footer {
