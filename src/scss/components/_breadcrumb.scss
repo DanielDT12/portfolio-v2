@@ -1,0 +1,14 @@
+.breadcrumb {
+	position: absolute; // Linket til primaryHeader position relative. Hjelper med consistent spacing rundt border.
+	font-family: var(--ff-special);
+
+	&__link {
+		color: var(--clr-light-blue);
+		font-size: var(--fs-300);
+		text-decoration: none;
+
+		&--active-page {
+			color: var(--clr-rose);
+		}
+	}
+}
