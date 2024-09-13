@@ -30,7 +30,14 @@ export default function HamburgerMenu({
 					<GiHamburgerMenu className={iconClass} />
 				)}
 			</button>
-			{isOpen === true && <PrimaryNav navClass={"hamburger-menu__nav"} />}
+			{isOpen && (
+				<PrimaryNav
+					navClass={"hamburger-menu__nav"}
+					ulClass={"hamburger-menu__list"}
+					liClass={"hamburger-menu__list-item"}
+					linkClass={"hamburger-menu__link"}
+				/>
+			)}
 		</div>
 	);
 }
