@@ -14,19 +14,53 @@ export const ContactForm = ({
 	});
 
 	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [responseMessage, setResponseMessage] = useState("");
+	const [error, setError] = useState("");
 
 	const handleChange = (e) => {
-		setForm({ ...form, [e.target.name]: e.target.value });
+		setForm({
+			...form,
+			[e.target.name]: e.target.value,
+		});
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		console.log(form);
+		setIsSubmitting(true);
+		setError("");
+		setResponseMessage("");
+
+		try {
+			const res = await fetch("http://localhost:5000/api/contact", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(form),
+			});
+
+			if (res.ok) {
+				setResponseMessage("Your message has been sent successfully!");
+				setForm({
+					name: "",
+					email: "",
+					subject: "",
+					message: "",
+				});
+			} else {
+				const data = await res.json();
+				setError(data.error || "Something went wrong.");
+			}
+		} catch (err) {
+			setError("Something went wrong. Please try again later.");
+		} finally {
+			setIsSubmitting(false);
+		}
 	};
 
 	return (
 		<>
-			<form onSubmit={""}>
+			<form onSubmit={handleSubmit}>
 				<fieldset className={formWrapperClass}>
 					<legend className={formTitleClass}>Contact Me</legend>
 					<InputField
@@ -82,7 +116,6 @@ export const ContactForm = ({
 					<button
 						className={formSumbitBtnClass}
 						type="submit"
-						onSubmit={handleSubmit}
 						disabled={isSubmitting}
 					>
 						{isSubmitting ? "Sending..." : "Submit"}
