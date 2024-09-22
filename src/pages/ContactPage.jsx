@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ContactForm } from "../components/ContactForm";
-import HamburgerMenu from "../components/smallComponents/HamburgerMenu";
+import HamburgerMenu from "../components/UI/HamburgerMenu";
 
 export const ContactPage = () => {
 	return (
@@ -15,7 +15,7 @@ export const ContactPage = () => {
 				formTitleClass={"contact-form__title"}
 				formSumbitBtnClass={"contact-form__submit-btn"}
 			/>
-			<Link className="contact-page__home-link" to={"/"}>
+			<Link className="home-link" to={"/"}>
 				&larr; Home
 			</Link>
 		</main>
