@@ -1,0 +1,14 @@
+@use "../abstracts/media-queries" as *;
+
+.home-link {
+	font-family: var(--ff-special);
+	margin-bottom: 1.5rem;
+	align-self: end;
+	color: var(--clr-text-heading);
+	font-size: var(--fs-800);
+	text-decoration: none;
+
+	@include mq("s") {
+		font-size: var(--fs-500);
+	}
+}
