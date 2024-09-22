@@ -1,5 +1,5 @@
-import Breadcrumb from "./smallComponents/Breadcrumb";
-import { DarkLightModeToggle } from "./smallComponents/DarkLightModeToggle";
+import Breadcrumb from "./UI/Breadcrumb";
+import { DarkLightModeToggle } from "./UI/DarkLightModeToggle";
 
 export const PrimaryHeader = ({ headerClass }) => {
 	return (

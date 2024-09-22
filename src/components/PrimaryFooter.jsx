@@ -1,4 +1,4 @@
-import Clock from "./decorativeComponents/Clock";
+import Clock from "./UI/Clock";
 
 export const PrimaryFooter = ({ footerClass }) => {
 	return (
