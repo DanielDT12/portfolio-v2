@@ -8,6 +8,7 @@ import "./index.css";
 import { HeroSection } from "./components/HeroSection.jsx";
 import { MyWork } from "./pages/MyWork.jsx";
 import { ContactPage } from "./pages/ContactPage.jsx";
+import { AboutMe } from "./pages/AboutMe.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -20,11 +21,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/about",
-				element: (
-					<div className="test">
-						<p>About page</p>
-					</div>
-				),
+				element: <AboutMe />,
 			},
 			{
 				path: "/work",
