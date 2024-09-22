@@ -1,5 +1,5 @@
 import { IoLogoGithub } from "react-icons/io";
-import { PrimaryNav } from "./smallComponents/PrimaryNav";
+import { PrimaryNav } from "./UI/PrimaryNav";
 
 export const HeroSection = () => {
 	return (
