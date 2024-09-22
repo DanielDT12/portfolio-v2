@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { InputField } from "./smallComponents/InputField";
+import { InputField } from "./UI/InputField";
 
 export const ContactForm = ({
 	formWrapperClass,
@@ -41,6 +41,7 @@ export const ContactForm = ({
 
 			if (res.ok) {
 				setResponseMessage("Your message has been sent successfully!");
+				alert(`${responseMessage}`);
 				setForm({
 					name: "",
 					email: "",
@@ -53,6 +54,7 @@ export const ContactForm = ({
 			}
 		} catch (err) {
 			setError("Something went wrong. Please try again later.");
+			console.log("Something went wrong", error);
 		} finally {
 			setIsSubmitting(false);
 		}
