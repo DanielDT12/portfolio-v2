@@ -315,6 +315,23 @@ input {
   text-underline-offset: 10px;
 }
 
+.my-work {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  margin-inline: auto;
+}
+.my-work__title {
+  color: var(--clr-light-blue);
+  font-size: clamp(var(--fs-500), 12vw, var(--fs-900));
+}
+.my-work__card-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
 .primary-header {
   position: relative;
   margin-inline: var(--main-border-spacing);
@@ -567,6 +584,62 @@ input {
   height: var(--icon-size-skills);
   width: var(--icon-size-skills);
   color: var(--clr-text-heading);
+}
+
+.my-work-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--clr-text-heading);
+  padding: 1rem;
+  width: clamp(10rem, 25vw, 20rem);
+}
+.my-work-card__title {
+  margin-top: 1rem;
+  font-size: clamp(var(--fs-500), 12vw, var(--fs-700));
+  font-family: var(--ff-special);
+}
+.my-work-card__link {
+  position: relative;
+  padding: 0.5em 1em;
+  color: var(--clr-text-heading);
+  font-family: var(--ff-special);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+  text-decoration: none;
+  line-height: 1;
+  transition: var(--btn-ani);
+  cursor: pointer;
+}
+.my-work-card__link:is(:hover, :focus) {
+  color: var(--clr-bg);
+}
+.my-work-card__link:is(:hover, :focus)::before {
+  width: 100%;
+  height: 100%;
+}
+.my-work-card__link:is(:hover, :focus)::after {
+  border-top: 1px solid var(--clr-bg);
+  border-right: 1px solid var(--clr-bg);
+}
+.my-work-card__link::after, .my-work-card__link::before {
+  content: "";
+  position: absolute;
+  z-index: -10;
+  width: 0.75em;
+  height: 0.75em;
+  transition: var(--btn-ani);
+}
+.my-work-card__link::before {
+  left: 0;
+  bottom: 0;
+  background-color: var(--clr-purple);
+}
+.my-work-card__link::after {
+  top: 0;
+  right: 0;
+  border-top: 1px solid var(--clr-text-heading);
+  border-right: 1px solid var(--clr-text-heading);
 }
 
 .home-link {
