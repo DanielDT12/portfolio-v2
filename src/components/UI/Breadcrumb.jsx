@@ -10,7 +10,8 @@ export default function Breadcrumb() {
 			<Link className="breadcrumb__link" to={"/"}>
 				{"home"}
 			</Link>
-			<span>{` / `}</span>
+			<span style={{ color: "var(--clr-text-heading)" }}>{` / `}</span>{" "}
+			{/** INLINE STYLING REF TIL CUSTOM PROP */}
 			{location.pathname !== "/" && (
 				<Link
 					className="breadcrumb__link breadcrumb__link--active-page"
