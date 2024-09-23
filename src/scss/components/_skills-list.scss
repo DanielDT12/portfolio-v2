@@ -1,0 +1,44 @@
+@use "../abstracts/pseudo-element" as *;
+@use "../abstracts/media-queries" as *;
+
+.skills-list {
+	--icon-size-skills: clamp(1.5rem, 8vw, 4rem);
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	list-style: none;
+
+	@include mq("m") {
+		flex-direction: row;
+	}
+
+	&::before {
+		@include pseudo(16rem, 100%) {
+			content: "CURRENT SKILLS";
+			left: -3rem;
+			color: var(--clr-text-heading);
+			font-size: var(--fs-600);
+			font-family: var(--ff-special);
+			font-weight: var(--fw-bold);
+			writing-mode: vertical-lr;
+			text-orientation: upright;
+			text-align: center;
+			letter-spacing: 2px;
+
+			@include mq("m") {
+				writing-mode: horizontal-tb;
+				text-orientation: sideways;
+				top: -3rem;
+				left: calc(50% - 8rem);
+			}
+		}
+	}
+
+	&__icon {
+		height: var(--icon-size-skills);
+		width: var(--icon-size-skills);
+		color: var(--clr-text-heading);
+	}
+}
