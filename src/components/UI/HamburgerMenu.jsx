@@ -35,6 +35,7 @@ export default function HamburgerMenu({
 					ulClass={"hamburger-menu__list"}
 					liClass={"hamburger-menu__list-item"}
 					linkClass={"hamburger-menu__link"}
+					linkOnClick={() => handleChange()}
 				/>
 			)}
 		</div>
