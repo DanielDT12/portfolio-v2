@@ -1,3 +1,6 @@
+@use "../abstracts/media-queries" as *;
+@use "../abstracts/pseudo-element" as *;
+
 .my-work {
 	flex: 1;
 	display: flex;
@@ -12,7 +15,29 @@
 	}
 
 	&__card-wrapper {
+		position: relative;
 		display: flex;
 		gap: 2rem;
+		margin-inline: auto;
+		overflow-x: scroll;
+
+		@include mq("ml") {
+			width: 28rem;
+		}
+
+		@include mq("m") {
+			width: 20rem;
+		}
+
+		@include mq("s") {
+			width: 17rem;
+		}
+
+		&::after {
+			@include pseudo(20%, 100%) {
+				background-image: linear-gradient(to right, transparent, var(--clr-bg));
+				right: 0;
+			}
+		}
 	}
 }
