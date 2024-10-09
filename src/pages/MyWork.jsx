@@ -23,7 +23,8 @@ export const MyWork = () => {
 							imgSrc={card.imgSrc}
 							titleClass={"my-work-card__title"}
 							cardTextClass={"my-work-card__text"}
-							href={card.href}
+							hrefCode={card.hrefCode}
+							hrefPreview={card.hrefPreview}
 							titleText={card.title}
 							cardText={card.infoText}
 						/>
