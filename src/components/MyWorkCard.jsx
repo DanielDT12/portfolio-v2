@@ -6,7 +6,8 @@ export const MyWorkCard = ({
 	cardTextClass,
 	titleClass,
 	imgSrc,
-	href,
+	hrefCode,
+	hrefPreview,
 	titleText,
 	cardText,
 }) => {
@@ -17,10 +18,10 @@ export const MyWorkCard = ({
 				<h3 className={titleClass}>{titleText}</h3>
 				<p className={cardTextClass}>{cardText}</p>
 			</div>
-			<div className="flex-between">
+			<div className="flex-between" style={{ marginBlockStart: "1rem" }}>
 				<AnchorTag
 					anchorClass={"my-work-card__link"}
-					href={href}
+					href={hrefCode}
 					target={"_blank"}
 					rel={"noopener noreferrer"}
 				>
@@ -28,7 +29,7 @@ export const MyWorkCard = ({
 				</AnchorTag>
 				<AnchorTag
 					anchorClass={"my-work-card__link"}
-					href={href}
+					href={hrefPreview}
 					target={"_blank"}
 					rel={"noopener noreferrer"}
 				>
