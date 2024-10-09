@@ -6,7 +6,7 @@
 	justify-content: space-between;
 	border: 1px solid var(--clr-text-heading);
 	padding: 1rem;
-	width: clamp(10rem, 25vw, 20rem);
+	width: clamp(13rem, 25vw, 20rem);
 
 	&__title {
 		margin-top: 1rem;
@@ -22,6 +22,7 @@
 		font-size: var(--fs-300);
 		font-weight: var(--fw-bold);
 		text-decoration: none;
+		text-align: center;
 		line-height: 1;
 		transition: var(--btn-ani);
 		cursor: pointer;
