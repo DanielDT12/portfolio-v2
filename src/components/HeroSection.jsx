@@ -10,7 +10,7 @@ export const HeroSection = () => {
 						Hi, welcome to my portfolio
 					</p>
 					<h1 className="hero-section__title">My name is Daniel</h1>
-					<p className="">
+					<p className="hero-section__info">
 						I am currently working towards becoming a web developer. While my
 						skills are mostly focused on frontend development, I am eager to
 						learn backend as well. I find learning to be the most enjoyable
