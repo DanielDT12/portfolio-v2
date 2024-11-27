@@ -34,6 +34,11 @@
 		font-size: clamp(var(--fs-700), 6vw, var(--fs-900));
 	}
 
+	&__info {
+		font-weight: var(--fw-thin);
+		line-height: 1.3;
+	}
+
 	&__github-icon {
 		// local custom prop for scaling icon
 		--icon-width-large: 8rem;
