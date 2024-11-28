@@ -20,8 +20,16 @@ export const WORK_CARD_LIST = [
 	{
 		title: "Pokédex",
 		imgSrc: "/images/pokedex-img.jpg",
-		infoText: "Pokédex project i am working on using the pokeApi.",
+		infoText: "Pokédex project i built with the pokeApi.",
 		hrefCode: "https://github.com/DanielDT12/pokedex-v2-react",
 		hrefPreview: "https://pokedex-v2-react.vercel.app/",
+	},
+	{
+		title: "Bedrift Register",
+		imgSrc: "/images/brreg-data-side.jpeg",
+		infoText:
+			"A small app that lets you search for companies by muncipality and year of establishment.",
+		hrefCode: "https://github.com/DanielDT12/web7-final",
+		hrefPreview: "https://web7-final.vercel.app/",
 	},
 ];
