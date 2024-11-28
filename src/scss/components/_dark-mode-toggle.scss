@@ -13,6 +13,7 @@
 		width: var(--radio-size);
 		border: 1px solid var(--clr-text-heading);
 		transition: background-color 300ms ease;
+		cursor: pointer;
 
 		&:checked {
 			background-color: var(--clr-purple);
