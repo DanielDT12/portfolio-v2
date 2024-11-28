@@ -9,6 +9,7 @@ import { HeroSection } from "./components/HeroSection.jsx";
 import { MyWork } from "./pages/MyWork.jsx";
 import { ContactPage } from "./pages/ContactPage.jsx";
 import { AboutMe } from "./pages/AboutMe.jsx";
+import TestPage from "./pages/TestPage.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
 			{
 				path: "/contact",
 				element: <ContactPage />,
+			},
+			{
+				path: "/test",
+				element: <TestPage />,
 			},
 		],
 		errorElement: <div>Error element</div>,
