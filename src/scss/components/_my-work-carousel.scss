@@ -1,0 +1,30 @@
+.my-work-carousel {
+	position: relative;
+	border: 1px solid red;
+	padding: 1rem 3rem;
+
+	&__content-wrapper {
+		display: flex;
+		gap: 1rem;
+		max-width: 60rem;
+		overflow: hidden;
+	}
+
+	&__button {
+		position: absolute;
+		border: none;
+		background: none;
+		font-size: var(--fs-900);
+		cursor: pointer;
+	}
+}
+
+.left-button {
+	top: 50%;
+	left: 0;
+}
+
+.right-button {
+	top: 50%;
+	right: 0;
+}
