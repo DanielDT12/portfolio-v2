@@ -1,4 +1,5 @@
 @use "../abstracts/media-queries" as *;
+@use "../abstracts/pseudo-element" as *;
 
 .hero-section {
 	flex: 1;
@@ -8,9 +9,29 @@
 	border-right: 1px solid var(--clr-text-heading);
 	padding: 0 var(--main-border-spacing);
 
+	&::before {
+		@include pseudo(
+			calc(100% - var(--main-border-spacing) * 2),
+			calc(100% - var(--main-border-spacing) * 2)
+		) {
+			content: "";
+			background-image: radial-gradient(
+					circle at top right,
+					hsla(0, 54%, 35%, 0.2) 0,
+					transparent 30%
+				),
+				radial-gradient(
+					circle at bottom left,
+					hsla(219, 54%, 35%, 0.2) 0,
+					transparent 30%
+				);
+		}
+		z-index: -10;
+	}
+
 	&__wrapper {
 		display: flex;
-		align-items: center;
+		align-items: start;
 		justify-content: space-between;
 		width: var(--main-container-width);
 
