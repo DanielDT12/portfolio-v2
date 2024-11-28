@@ -7,6 +7,7 @@ export default function Clock() {
 	});
 
 	const [currentTime, setCurrentTime] = useState(time);
+
 	const updateTime = () => {
 		time = new Date().toLocaleTimeString([], {
 			hour: "2-digit",
