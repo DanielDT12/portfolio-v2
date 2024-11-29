@@ -1,0 +1,11 @@
+.my-work-cards-container {
+	position: relative;
+	max-width: 60rem;
+	overflow-x: scroll;
+
+	&__content-wrapper {
+		display: flex;
+		gap: 1rem;
+		padding-block: 1rem;
+	}
+}
