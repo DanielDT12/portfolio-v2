@@ -4,7 +4,16 @@ html {
 }
 
 ::-webkit-scrollbar {
-	display: none;
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	border: 2px solid var(--clr-text-heading);
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-image: linear-gradient(to right, var(--clr-pink), var(--clr-rose));
 }
 
 body {
