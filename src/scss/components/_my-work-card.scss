@@ -1,4 +1,5 @@
 @use "../abstracts/pseudo-element" as *;
+@use "../abstracts/media-queries" as *;
 
 .my-work-card {
 	display: flex;
@@ -7,6 +8,14 @@
 	border: 1px solid var(--clr-text-heading);
 	padding: 1rem;
 	min-width: 20rem;
+
+	@include mq("m") {
+		min-width: 16rem;
+	}
+
+	@include mq("s") {
+		min-width: 15rem;
+	}
 
 	&__title {
 		margin-top: 1rem;
