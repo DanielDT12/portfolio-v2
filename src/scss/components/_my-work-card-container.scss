@@ -1,7 +1,9 @@
 .my-work-cards-container {
 	position: relative;
 	max-width: 60rem;
-	overflow-x: scroll;
+	overflow-x: auto;
+	overflow-y: hidden;
+	pointer-events: auto;
 
 	&__content-wrapper {
 		display: flex;
