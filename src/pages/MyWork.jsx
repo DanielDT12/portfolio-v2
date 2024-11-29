@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import HamburgerMenu from "../components/UI/HamburgerMenu";
-import MyWorkCardsContainer from "../components/MyWorkCarousel";
+import MyWorkCardsContainer from "../components/MyWorkCardsContainer";
 
 export const MyWork = () => {
 	return (
