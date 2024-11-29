@@ -1,13 +1,24 @@
+@use "../abstracts/media-queries" as *;
+
 .primary-nav {
 	font-family: var(--ff-special);
 
 	&__list {
 		gap: 1rem;
+		margin-left: 96px; // dårlig løsning, men dette er hvor brei list markeren er. Er for alignment av liste.
+
+		@include mq("s") {
+			margin-left: 67.2px;
+		}
 	}
 
 	&__list-item {
-		font-size: clamp(var(--fs-700), 9vw, var(--fs-900));
+		font-size: var(--fs-900);
 		font-weight: var(--fw-xt-thin);
+
+		@include mq("s") {
+			font-size: var(--fs-700);
+		}
 
 		&::marker {
 			content: "01. ";
@@ -26,8 +37,12 @@
 	}
 
 	&__link {
-		font-size: clamp(var(--fs-700), 9vw, var(--fs-900));
+		font-size: var(--fs-900);
 		font-weight: var(--fw-xt-thin);
 		text-decoration: none;
+
+		@include mq("s") {
+			font-size: var(--fs-700);
+		}
 	}
 }
