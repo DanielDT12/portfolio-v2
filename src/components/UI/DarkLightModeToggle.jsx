@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useState } from "react";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 export const DarkLightModeToggle = ({
 	wrapperClass,
@@ -13,7 +13,7 @@ export const DarkLightModeToggle = ({
 		return preferDarkMode ? "dark" : "light";
 	};
 
-	const [colorTheme, setColorTheme] = useState(initialTheme());
+	const [colorTheme, setColorTheme] = useLocalStorage("theme", initialTheme());
 
 	useEffect(() => {
 		document.documentElement.setAttribute("data-color-theme", colorTheme);
