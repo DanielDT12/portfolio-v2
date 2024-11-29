@@ -11,8 +11,8 @@
 
 	&::before {
 		@include pseudo(
-			calc(100% - var(--main-border-spacing) * 2),
-			calc(100% - var(--main-border-spacing) * 2)
+			calc(100dvw - var(--main-border-spacing) * 2),
+			calc(100dvh - var(--main-border-spacing) * 2)
 		) {
 			content: "";
 			background-image: radial-gradient(
@@ -30,8 +30,8 @@
 
 		@include mq("l") {
 			@include pseudo(
-				calc(100% - var(--main-border-spacing) * 2),
-				calc(100% - var(--main-border-spacing) * 4)
+				calc(100dvw - var(--main-border-spacing) * 2),
+				calc(100dvh - var(--main-border-spacing) * 4)
 					// change height to match media query, prevents gradient from clipping outside, main container.
 			) {
 				content: "";
