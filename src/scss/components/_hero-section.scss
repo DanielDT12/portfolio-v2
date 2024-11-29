@@ -27,6 +27,17 @@
 				);
 		}
 		z-index: -10;
+
+		@include mq("l") {
+			@include pseudo(
+				calc(100% - var(--main-border-spacing) * 2),
+				calc(100% - var(--main-border-spacing) * 4)
+					// change height to match media query, prevents gradient from clipping outside, main container.
+			) {
+				content: "";
+			}
+			z-index: -10;
+		}
 	}
 
 	&__wrapper {
