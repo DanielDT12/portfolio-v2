@@ -7,7 +7,6 @@
 	flex-direction: column;
 	justify-content: center;
 	gap: 1rem;
-	margin-inline: auto;
 
 	&__title {
 		position: relative;
@@ -15,49 +14,7 @@
 		font-size: clamp(var(--fs-500), 12vw, var(--fs-900));
 	}
 
-	&__card-wrapper {
-		display: flex;
-		gap: 2rem;
-		margin-inline: auto;
-		overflow-x: scroll;
-
-		@include mq("ml") {
-			width: 28rem;
-		}
-
-		@include mq("m") {
-			width: 20rem;
-		}
-
-		@include mq("s") {
-			width: 17rem;
-		}
-
-		&::after {
-			// media query toggle for scroll container pseudo element fade
-			@include mq("ml") {
-				@include pseudo(60%, 58%) {
-					background-image: linear-gradient(
-						to right,
-						transparent,
-						var(--clr-bg)
-					);
-					right: 2rem;
-					top: 15rem;
-				}
-			}
-
-			@include mq("s") {
-				@include pseudo(60%, 58%) {
-					background-image: linear-gradient(
-						to right,
-						transparent,
-						var(--clr-bg)
-					);
-					right: 0;
-					top: 15rem;
-				}
-			}
-		}
+	@include mqMin("xxl") {
+		margin: auto;
 	}
 }
