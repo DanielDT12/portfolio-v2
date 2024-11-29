@@ -642,7 +642,7 @@ input {
   justify-content: space-between;
   border: 1px solid var(--clr-text-heading);
   padding: 1rem;
-  width: clamp(13rem, 25vw, 20rem);
+  min-width: 20rem;
 }
 .my-work-card__title {
   margin-top: 1rem;
