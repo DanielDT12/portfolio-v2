@@ -1,4 +1,4 @@
-import MyWorkCarousel from "../components/MyWorkCarousel";
+import MyWorkCarousel from "../components/MyWorkCardsContainer";
 
 export default function TestPage() {
 	return (
