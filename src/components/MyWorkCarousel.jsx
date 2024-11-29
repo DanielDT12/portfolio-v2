@@ -1,13 +1,10 @@
-import { useState } from "react";
 import { WORK_CARD_LIST } from "../data/WORK_CARD_LIST";
 import { MyWorkCard } from "./MyWorkCard";
 
-export default function MyWorkCarousel() {
-	const [index, setIndex] = useState(0);
-
+export default function MyWorkCardsContainer() {
 	return (
-		<div className="my-work-carousel">
-			<div className="my-work-carousel__content-wrapper">
+		<div className="my-work-cards-container">
+			<div className="my-work-cards-container__content-wrapper">
 				{WORK_CARD_LIST.map((card, index) => (
 					<MyWorkCard
 						key={card.title + index}
@@ -23,8 +20,6 @@ export default function MyWorkCarousel() {
 					/>
 				))}
 			</div>
-			<button className="my-work-carousel__button left-button">&larr;</button>
-			<button className="my-work-carousel__button right-button">&rarr;</button>
 		</div>
 	);
 }
