@@ -13,7 +13,7 @@ export default function TestPage() {
 
 				<div style={{ display: "flex", gap: "1rem" }}>
 					<CiMail style={{ width: "2rem", height: "2rem" }} />
-					<a href="mailto:danielsolheim@live.no">Test mail link</a>
+					<a href="mailto:daniel.digitaletalenter@gmail.com">Test mail link</a>
 				</div>
 
 				<div style={{ display: "flex", gap: "1rem" }}>
