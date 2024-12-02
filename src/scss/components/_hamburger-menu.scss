@@ -23,6 +23,8 @@
 			var(--clr-bg) 100%
 		);
 		z-index: -10;
+		clip-path: (100% 0 0 0);
+		transition: clip-path 0.3s ease-in-out;
 	}
 
 	&__list {
@@ -59,4 +61,12 @@
 	@include mq("s") {
 		--icon-size: 2rem;
 	}
+}
+
+.is-open {
+	clip-path: inset(0 0 0 0);
+}
+
+.is-closed {
+	clip-path: inset(0 0 100% 0);
 }
