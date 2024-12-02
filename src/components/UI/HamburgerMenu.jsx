@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
 import { PrimaryNav } from "./PrimaryNav";
@@ -12,7 +12,7 @@ export default function HamburgerMenu({
 	const { isOpen, setIsOpen } = useContext(AppContext);
 
 	const handleChange = () => {
-		return setIsOpen(!isOpen);
+		setIsOpen((prev) => !prev);
 	};
 
 	return (
@@ -22,6 +22,8 @@ export default function HamburgerMenu({
 				onClick={() => {
 					handleChange();
 				}}
+				aria-expanded={isOpen}
+				aria-controls="nav-menu"
 			>
 				{isOpen ? (
 					<IoCloseSharp className={iconClass} />
@@ -29,15 +31,14 @@ export default function HamburgerMenu({
 					<GiHamburgerMenu className={iconClass} />
 				)}
 			</button>
-			{isOpen && (
-				<PrimaryNav
-					navClass={"hamburger-menu__nav"}
-					ulClass={"hamburger-menu__list"}
-					liClass={"hamburger-menu__list-item"}
-					linkClass={"hamburger-menu__link"}
-					linkOnClick={() => handleChange()}
-				/>
-			)}
+			<PrimaryNav
+				navClass={`hamburger-menu__nav ${isOpen ? "is-open" : "is-closed"}`}
+				ulClass={"hamburger-menu__list"}
+				liClass={"hamburger-menu__list-item"}
+				linkClass={"hamburger-menu__link"}
+				linkOnClick={() => handleChange()}
+				id="nav-menu"
+			/>
 		</div>
 	);
 }
