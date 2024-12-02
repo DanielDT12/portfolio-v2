@@ -10,7 +10,7 @@ export default function MyWorkCardsContainer() {
 
 		const handleScroll = (e) => {
 			e.preventDefault();
-			const SCROLL_SPEED = 0.5;
+			const SCROLL_SPEED = 0.65;
 			container.scrollLeft += e.deltaY * SCROLL_SPEED;
 		};
 
