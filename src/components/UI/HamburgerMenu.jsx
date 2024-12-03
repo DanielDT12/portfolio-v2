@@ -19,9 +19,7 @@ export default function HamburgerMenu({
 		<div className={wrapperClass}>
 			<button
 				className={buttonClass}
-				onClick={() => {
-					handleChange();
-				}}
+				onClick={handleChange}
 				aria-expanded={isOpen}
 				aria-controls="nav-menu"
 			>
