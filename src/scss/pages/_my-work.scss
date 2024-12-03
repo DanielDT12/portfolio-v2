@@ -12,6 +12,9 @@
 		position: relative;
 		color: var(--clr-light-blue);
 		font-size: clamp(var(--fs-500), 12vw, var(--fs-900));
+		font-family: var(--ff-special);
+		text-decoration: underline var(--clr-text-heading) 3px;
+		text-underline-offset: 5px;
 	}
 
 	@include mqMin("xxl") {

@@ -32,9 +32,10 @@
 	}
 
 	&__title {
-		font-size: clamp(var(--fs-400), 6vw, var(--fs-900));
 		color: var(--clr-pink);
-		text-decoration: underline white 2px;
-		text-underline-offset: 10px;
+		font-size: clamp(var(--fs-400), 6vw, var(--fs-900));
+		font-family: var(--ff-special);
+		text-decoration: underline var(--clr-text-heading) 3px;
+		text-underline-offset: 5px;
 	}
 }

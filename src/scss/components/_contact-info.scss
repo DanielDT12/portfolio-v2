@@ -11,6 +11,8 @@
 	&__title {
 		color: var(--clr-rose);
 		font-family: var(--ff-special);
+		text-decoration: underline var(--clr-text-heading) 3px;
+		text-underline-offset: 5px;
 	}
 
 	&__text {
